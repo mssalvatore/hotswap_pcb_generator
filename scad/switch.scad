@@ -189,18 +189,22 @@ module switch_socket_cutout_logic(
                 }
 
                 // Column wire
-                translate([
-                        col_channel_xy.x,
-                        col_channel_xy.y,
-                        -(pcb_thickness/2-wire_diameter/3)
-                ]) 
-                    rotate([upsidedown_switch?-90:90,0,rotate_column?90:0])
-                    translate([0,0,-4*mx_schematic_unit])
-                    linear_extrude(col_cutout_length, center=true) teardrop2d(wire_diameter/2);
+                wire_channel(col_channel_xy, rotate_column, col_cutout_length);
 
             }
             socket_cleanup_cube(borders);
         }
+}
+
+module wire_channel(col_channel_xy, rotate_column, length) {
+    translate([
+            col_channel_xy.x,
+            col_channel_xy.y,
+            -(pcb_thickness/2-wire_diameter/3)
+    ])
+        rotate([upsidedown_switch?-90:90,0,rotate_column?90:0])
+        translate([0,0,-4*mx_schematic_unit])
+        linear_extrude(length, center=true) teardrop2d(wire_diameter/2);
 }
 
 
