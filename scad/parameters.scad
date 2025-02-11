@@ -3,7 +3,7 @@
 wire_diameter = 2.15;
 // Upward angle of switch pin in contact with diode anode (gives more reliable
 // connections but slightly deforms pin)
-diode_pin_angle = 5;  // [0:15]
+diode_pin_angle = 0;  // [0:15]
 // Amount the diode folds over
 diode_foldover = 4;
 // Overall thickness of PCB
