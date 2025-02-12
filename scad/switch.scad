@@ -114,7 +114,7 @@ module switch_socket_cutout_logic(
                 }
 
                 // Diode Channel
-                if (switch_type == "choc"){
+                *if (switch_type == "choc"){
                     translate([-3.125,0,pcb_thickness/2])
                         cube([1,7.6,2],center=true);
                     translate([.75,3.8,pcb_thickness/2])
@@ -133,7 +133,7 @@ module switch_socket_cutout_logic(
                 }
 
                 // Diode cathode cutout
-                translate(diode_cutout_xy)
+                *translate(diode_cutout_xy)
                     cylinder(h=pcb_thickness+1,r=.7,center=true);
 
                 // Row wire
@@ -141,7 +141,7 @@ module switch_socket_cutout_logic(
                 kink_smoothing_width = 2.8;
                 kink_width = top_pin_cutout_r*3;
                 kink_deviation = tan(kink_angle)*kink_width/2;
-                difference(){
+                *difference(){
                     translate([0,
                             row_channel_y-kink_deviation,
                             pcb_thickness/2-wire_diameter/3
@@ -161,7 +161,7 @@ module switch_socket_cutout_logic(
                 }
 
                 // Kink the channel across the switch pin for better contact.
-                if (kink_angle != 0) {
+                *if (kink_angle != 0) {
                     // Left is diagonal channel back to main channel, so the rest of
                     // the channel to the left lines up with other keys.
                     // Other one is the diagonal channel crossing switch pin.
@@ -179,7 +179,7 @@ module switch_socket_cutout_logic(
                     }
 
                     // flat bit of channel to smooth kink return.
-                    translate([top_pin_xy.x - kink_smoothing_width/2 -
+                    *translate([top_pin_xy.x - kink_smoothing_width/2 -
                             kink_width/2,
                             top_pin_xy.y + kink_deviation,
                             pcb_thickness/2-wire_diameter/3
