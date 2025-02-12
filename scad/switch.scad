@@ -189,7 +189,7 @@ module switch_socket_cutout_logic(
                 }
 
                 // Column wire
-                wire_channel(col_channel_xy, rotate_column, col_cutout_length);
+                *wire_channel(col_channel_xy, rotate_column, col_cutout_length);
 
             }
             socket_cleanup_cube(borders);
