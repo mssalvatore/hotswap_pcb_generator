@@ -148,7 +148,7 @@ cutout_grid_spacing = 1.6;
 // Increase this if your standoffs are a bit too long due to printing tolerances
 fit_tolerance = 0;
 // Resolution of holes (affects render times)
-$fn= $preview ? 12 : 60;
+$fn= 256;
 // Very small value added to dimensions for through cuts
 eps=0.001;
 
