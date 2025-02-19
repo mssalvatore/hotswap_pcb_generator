@@ -44,7 +44,7 @@ module mx_socket_cutout(borders=[1,1,1,1], rotate_column=false){
             diode_cutout_xy = [3*mx_schematic_unit,-4*mx_schematic_unit],
             col_channel_xy = [3*mx_schematic_unit,-4*mx_schematic_unit],
             row_channel_y = 4*mx_schematic_unit,
-            central_pin_r = 1.9,
+            central_pin_r = 2.0,
             borders=borders,
             rotate_column=rotate_column
             );
