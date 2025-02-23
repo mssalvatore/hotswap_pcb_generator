@@ -1,6 +1,6 @@
 /* PCB Parameters */
 // Diameter of row/column wire channels
-wire_diameter = 2.1;
+wire_diameter = 1.9;
 // Upward angle of switch pin in contact with diode anode (gives more reliable
 // connections but slightly deforms pin)
 diode_pin_angle = 0;  // [0:15]
